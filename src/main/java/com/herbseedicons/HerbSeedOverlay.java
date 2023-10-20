@@ -31,7 +31,7 @@ public class HerbSeedOverlay extends WidgetItemOverlay
     @Override
     public void renderItemOverlay(final Graphics2D graphics, final int id , final WidgetItem itemWidget)
     {
-        if (HerbSeedEnum.has(id)) {
+        if (id >= 5291 && id <= 5304) {
 			final Rectangle bounds = itemWidget.getCanvasBounds();
 			final int quantity = Math.min(itemWidget.getQuantity(), 5);
 			final Image iconImage = this.getReplacementIcon(id, quantity);
