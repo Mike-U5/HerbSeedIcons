@@ -25,17 +25,14 @@ public class HerbSeedOverlay extends WidgetItemOverlay
         this.showOnEquipment();
 		this.showOnInventory();
 		this.showOnBank();
-		this.showOnInterfaces(WidgetID.SEED_VAULT_INVENTORY_GROUP_ID, WidgetID.SEED_BOX_GROUP_ID, WidgetID.SEED_VAULT_GROUP_ID);
+		this.showOnInterfaces(WidgetID.SEED_BOX_GROUP_ID, WidgetID.SEED_VAULT_INVENTORY_GROUP_ID, WidgetID.SEED_VAULT_GROUP_ID);
     }
 
     @Override
-    public void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
+    public void renderItemOverlay(final Graphics2D graphics, final int id , final WidgetItem itemWidget)
     {
-        final HerbSeedEnum icon = HerbSeedEnum.getIconOverride(itemId);
-
-        if (icon != null) {
+        if (HerbSeedEnum.has(id)) {
 			final Rectangle bounds = itemWidget.getCanvasBounds();
-			final int id = icon.getId();
 			final int quantity = Math.min(itemWidget.getQuantity(), 5);
 			final Image iconImage = this.getReplacementIcon(id, quantity);
 
