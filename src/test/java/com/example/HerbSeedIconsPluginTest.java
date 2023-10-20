@@ -1,13 +1,14 @@
 package com.example;
 
+import com.herbseedicons.HerbSeedIconsPlugin;
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class ExamplePluginTest
+public class HerbSeedIconsPluginTest
 {
 	public static void main(String[] args) throws Exception
 	{
-		ExternalPluginManager.loadBuiltin(ExamplePlugin.class);
+		ExternalPluginManager.loadBuiltin(HerbSeedIconsPlugin.class);
 		RuneLite.main(args);
 	}
 }
