@@ -23,10 +23,9 @@ public class HerbSeedOverlay extends WidgetItemOverlay
     @Inject
     private HerbSeedOverlay()
     {
-        this.showOnEquipment();
 		this.showOnInventory();
 		this.showOnBank();
-		this.showOnInterfaces(WidgetID.SEED_BOX_GROUP_ID, WidgetID.SEED_VAULT_INVENTORY_GROUP_ID, WidgetID.SEED_VAULT_GROUP_ID);
+		this.showOnInterfaces(WidgetID.SEED_BOX_GROUP_ID, WidgetID.SEED_VAULT_INVENTORY_GROUP_ID, WidgetID.SEED_VAULT_GROUP_ID, WidgetID.POH_TREASURE_CHEST_INVENTORY_GROUP_ID, WidgetID.GROUP_STORAGE_GROUP_ID, WidgetID.GROUP_STORAGE_INVENTORY_GROUP_ID);
     }
 
     @Override
