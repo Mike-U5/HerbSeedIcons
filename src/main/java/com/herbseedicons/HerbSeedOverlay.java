@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import javax.swing.ImageIcon;
 
 import lombok.extern.slf4j.Slf4j;
+import net.runelite.api.ItemID;
 import net.runelite.api.widgets.WidgetID;
 import net.runelite.api.widgets.WidgetItem;
 import net.runelite.client.ui.overlay.WidgetItemOverlay;
@@ -31,7 +32,7 @@ public class HerbSeedOverlay extends WidgetItemOverlay
     @Override
     public void renderItemOverlay(final Graphics2D graphics, final int id , final WidgetItem itemWidget)
     {
-        if (id >= 5291 && id <= 5304) {
+        if (id >= ItemID.GUAM_SEED && id <= ItemID.TORSTOL_SEED) {
 			final Rectangle bounds = itemWidget.getCanvasBounds();
 			final int quantity = Math.min(itemWidget.getQuantity(), 5);
 			final Image iconImage = this.getReplacementIcon(id, quantity);
@@ -43,6 +44,8 @@ public class HerbSeedOverlay extends WidgetItemOverlay
 			}
         }
     }
+
+
 
 	private Image getReplacementIcon(final int id, final int quantity) {
 		final String key = id + "_" + quantity;
