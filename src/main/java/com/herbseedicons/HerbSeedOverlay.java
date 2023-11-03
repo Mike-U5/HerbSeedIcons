@@ -8,7 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.inject.Inject;
 import javax.swing.ImageIcon;
-
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.ItemID;
 import net.runelite.api.widgets.WidgetID;
@@ -25,15 +24,24 @@ public class HerbSeedOverlay extends WidgetItemOverlay
     {
 		this.showOnInventory();
 		this.showOnBank();
-		this.showOnInterfaces(WidgetID.SEED_BOX_GROUP_ID, WidgetID.SEED_VAULT_INVENTORY_GROUP_ID, WidgetID.SEED_VAULT_GROUP_ID, WidgetID.POH_TREASURE_CHEST_INVENTORY_GROUP_ID, WidgetID.GROUP_STORAGE_GROUP_ID, WidgetID.GROUP_STORAGE_INVENTORY_GROUP_ID);
+		this.showOnInterfaces(
+			268, // INVENTORY WITH BANK PIN OPEN
+			WidgetID.SEED_BOX_GROUP_ID,
+			WidgetID.SEED_VAULT_INVENTORY_GROUP_ID,
+			WidgetID.SEED_VAULT_GROUP_ID,
+			WidgetID.POH_TREASURE_CHEST_INVENTORY_GROUP_ID,
+			WidgetID.GROUP_STORAGE_GROUP_ID,
+			WidgetID.GROUP_STORAGE_INVENTORY_GROUP_ID,
+			WidgetID.BANK_PIN_GROUP_ID
+		);
     }
 
     @Override
-    public void renderItemOverlay(final Graphics2D graphics, final int id , final WidgetItem itemWidget)
+    public void renderItemOverlay(final Graphics2D graphics, final int id , final WidgetItem widget)
     {
         if (id >= ItemID.GUAM_SEED && id <= ItemID.TORSTOL_SEED) {
-			final Rectangle bounds = itemWidget.getCanvasBounds();
-			final int quantity = Math.min(itemWidget.getQuantity(), 5);
+			final Rectangle bounds = widget.getCanvasBounds();
+			final int quantity = Math.min(widget.getQuantity(), 5);
 			final Image iconImage = this.getReplacementIcon(id, quantity);
 
 			if (iconImage == null) {
