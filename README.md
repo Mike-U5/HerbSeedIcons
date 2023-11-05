@@ -1,2 +1,2 @@
-# Example
-An example greeter plugin
+# Recolored Herb Seeds
+Recolors herb seeds to match their respective herb
