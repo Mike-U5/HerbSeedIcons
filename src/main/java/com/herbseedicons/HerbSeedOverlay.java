@@ -62,9 +62,9 @@ public class HerbSeedOverlay extends WidgetItemOverlay
 
 			if (resourceUrl == null) {
 				return null;
-			} else {
-				this.images.put(key, new ImageIcon(resourceUrl).getImage());
 			}
+
+			this.images.put(key, new ImageIcon(resourceUrl).getImage());
 		}
 
 		return this.images.get(key);

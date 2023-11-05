@@ -10,7 +10,7 @@ import net.runelite.client.plugins.PluginDescriptor;
 @PluginDescriptor(
 		name = "Herb Seed Icons",
 		description = "Herb Seed Icons",
-		tags = {"bank", "inventory", "icon"}
+		tags = {"seeds", "cosmetic", "inventory", "icon"}
 )
 public class HerbSeedIconsPlugin extends Plugin
 {
