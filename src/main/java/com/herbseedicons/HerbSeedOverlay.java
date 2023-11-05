@@ -10,7 +10,7 @@ import javax.inject.Inject;
 import javax.swing.ImageIcon;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.ItemID;
-import net.runelite.api.widgets.WidgetID;
+import net.runelite.api.widgets.InterfaceID;
 import net.runelite.api.widgets.WidgetItem;
 import net.runelite.client.ui.overlay.WidgetItemOverlay;
 
@@ -25,14 +25,16 @@ public class HerbSeedOverlay extends WidgetItemOverlay
 		this.showOnInventory();
 		this.showOnBank();
 		this.showOnInterfaces(
-			268, // INVENTORY WITH BANK PIN OPEN
-			WidgetID.SEED_BOX_GROUP_ID,
-			WidgetID.SEED_VAULT_INVENTORY_GROUP_ID,
-			WidgetID.SEED_VAULT_GROUP_ID,
-			WidgetID.POH_TREASURE_CHEST_INVENTORY_GROUP_ID,
-			WidgetID.GROUP_STORAGE_GROUP_ID,
-			WidgetID.GROUP_STORAGE_INVENTORY_GROUP_ID,
-			WidgetID.BANK_PIN_GROUP_ID
+			//268, // INVENTORY WITH BANK PIN OPEN
+			InterfaceID.SEED_BOX,
+			InterfaceID.SEED_VAULT,
+			InterfaceID.SEED_VAULT_INVENTORY,
+			InterfaceID.POH_TREASURE_CHEST_INV,
+			InterfaceID.GROUP_STORAGE,
+			InterfaceID.GROUP_STORAGE_INVENTORY,
+			InterfaceID.BANK,
+			InterfaceID.BANK_INVENTORY,
+			InterfaceID.BANK_PIN
 		);
     }
 
