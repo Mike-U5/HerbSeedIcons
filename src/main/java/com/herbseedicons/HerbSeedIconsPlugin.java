@@ -8,8 +8,8 @@ import net.runelite.client.plugins.PluginDescriptor;
 
 @Slf4j
 @PluginDescriptor(
-		name = "Herb Seed Icons",
-		description = "Herb Seed Icons",
+		name = "Recolored Herb Seed Icons",
+		description = "Recolors herb seed icons to match their respective herb. Plugin by Mike Lt. Icons by /u/Narsuaq",
 		tags = {"seeds", "cosmetic", "inventory", "icon"}
 )
 public class HerbSeedIconsPlugin extends Plugin

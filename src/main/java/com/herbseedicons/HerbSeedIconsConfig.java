@@ -4,7 +4,7 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("Herb Seed Icons")
+@ConfigGroup("Recolored Herb Seed Icons")
 public interface HerbSeedIconsConfig extends Config
 {
 	@ConfigItem(
